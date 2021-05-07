@@ -1,26 +1,29 @@
-version: '3.3'
+version: '3.7'
 
 services:
-    db:
+    my_db:
         image: postgres
+        environment:
+          - POSTGRES_DB=my_db
+          - POSTGRES_USER=postgres
+          - POSTGRES_PASSWORD=postgres
         volumes:
           - postgres_data:/var/lib/postgresql/data/
         networks:
           - djangonetwork
-    web:
+    my_web:
         build: .
         command: bash -c "
           python finance_api/manage.py migrate &&
-          python finance_api/manage.py api_parsing &&
           python finance_api/manage.py runserver 0.0.0.0:8000"
         volumes:
             - .:/test_task_data_ox
         ports:
             - 8000:8000
         depends_on:
-          - db
+          - my_db
         links:
-          - db:db
+          - my_db:my_db
         networks:
           - djangonetwork
 
