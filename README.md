@@ -8,9 +8,9 @@ all_data/
 
 *Endpoint to retrive data for specific company:*
 
-all_data?ticker=RUN
+- all_data?ticker=RUN
 
-all_data?ticker=DOCU
+- all_data?ticker=DOCU
 
 **Commands for docker would be next:**
 
