@@ -2,6 +2,9 @@
 
 **This is simple API for retriving historical data from yahoo finance.**
 
+```git clone https://github.com/ViktorRaboshchuk/test_task_data_ox```
+
+
 *Endpoint to retriave whole bunch of data:*
 
 http://0.0.0.0:8000/all_data/
