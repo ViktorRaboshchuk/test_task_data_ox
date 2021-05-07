@@ -18,6 +18,8 @@ db.sqlite3
 env
 venv
 .venv
-ox_venv/
+.ox_venv
+ox_venv
 
-.idea/
+.idea
+idea
