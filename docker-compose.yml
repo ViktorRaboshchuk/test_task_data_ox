@@ -9,12 +9,10 @@ services:
           - POSTGRES_PASSWORD=postgres
         volumes:
           - postgres_data:/var/lib/postgresql/data/
-        networks:
-          - djangonetwork
+
     my_web:
         build: .
         command: bash -c "
-          python finance_api/manage.py migrate &&
           python finance_api/manage.py runserver 0.0.0.0:8000"
         volumes:
             - .:/test_task_data_ox
@@ -24,12 +22,7 @@ services:
           - my_db
         links:
           - my_db:my_db
-        networks:
-          - djangonetwork
 
-networks:
-    djangonetwork:
-        driver: bridge
 
 volumes:
   postgres_data:
