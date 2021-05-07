@@ -19,3 +19,5 @@ env
 venv
 .venv
 ox_venv/
+
+.idea/
