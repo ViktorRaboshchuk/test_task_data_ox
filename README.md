@@ -3,9 +3,11 @@
 **This is simple API for retriving historical data from yahoo finance.**
 
 *Endpoint to retriave whole bunch of data:*
+
 all_data/
 
 *Endpoint to retrive data for specific company:*
+
 all_data?ticker=RUN
 
 all_data?ticker=DOCU
